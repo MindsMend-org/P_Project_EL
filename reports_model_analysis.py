@@ -34,6 +34,9 @@ for file_path in file_paths:
 # Step 2: Combine DataFrames
 combined_df = pd.concat(data_frames, ignore_index=True)
 
+# Create prediction_instance column
+combined_df['prediction_instance'] = combined_df.groupby('el_model').cumcount() + 1
+
 # Step 3: Perform Data Analysis or Processing
 # Example: Displaying the first few rows of the combined DataFrame
 print(combined_df.head())
@@ -41,6 +44,7 @@ print(combined_df.head())
 # If you want to save the combined DataFrame to a new CSV file
 combined_df.to_csv('reports/combined_report_history.csv', index=False)
 
+# Define the functions as mentioned above
 
 def count_predictions_and_matches(df):
     """
@@ -67,7 +71,6 @@ def count_predictions_and_matches(df):
 
     return model_stats
 
-
 def calculate_statistics(df):
     """
     Calculates accuracy and standard deviation for each model.
@@ -82,7 +85,6 @@ def calculate_statistics(df):
     df['std_deviation'] = df['accuracy'].std()
 
     return df
-
 
 def plot_performance(df):
     """
@@ -102,8 +104,6 @@ def plot_performance(df):
 
     plt.savefig('reports/model_performance.png')
     plt.show()
-
-
 def plot_full_lottery_percent(df):
     """
     Plots the full 7 lottery number percentage for each model over time.
@@ -118,22 +118,22 @@ def plot_full_lottery_percent(df):
         intersection_count = len(predicted & actual)
         return (intersection_count / min(len(predicted), 7)) * 100
 
-    # Ensure the indices and label columns are treated as lists
     df['indices'] = df['indices'].apply(lambda x: eval(x) if isinstance(x, str) else x)
     df['label'] = df['label'].apply(lambda x: eval(x) if isinstance(x, str) else x)
 
     df['full_lottery_percent'] = df.apply(calculate_full_lottery_percent, axis=1)
-
-    # Clip percentages to a maximum of 100
     df['full_lottery_percent'] = df['full_lottery_percent'].clip(upper=100)
 
     models = df['el_model'].unique()
+    predictions = df['prediction_instance'].unique()
 
+    bar_width = 0.2
     plt.figure(figsize=(12, 8))
 
-    for model in models:
+    for i, model in enumerate(models):
         model_df = df[df['el_model'] == model]
-        plt.plot(model_df.index, model_df['full_lottery_percent'], marker='o', label=model)
+        indices = model_df['prediction_instance'] + i * bar_width
+        plt.bar(indices, model_df['full_lottery_percent'], width=bar_width, label=model)
 
     plt.xlabel('Prediction Instance')
     plt.ylabel('Full 7 Lottery Number %')
@@ -141,10 +141,10 @@ def plot_full_lottery_percent(df):
     plt.legend(title='Model')
     plt.grid(True)
     plt.tight_layout()
+    plt.xticks(ticks=predictions, labels=predictions)
 
     plt.savefig('reports/full_lottery_percent.png')
     plt.show()
-
 
 def plot_model_prediction_percent(df):
     """
@@ -153,16 +153,27 @@ def plot_model_prediction_percent(df):
     Args:
     df (pd.DataFrame): Combined DataFrame with all predictions and results.
     """
-    df['model_prediction_percent'] = df.apply(
-        lambda row: (len(set(row['indices']) & set(row['label'])) / len(row['indices'])) * 100, axis=1)
+
+    def calculate_model_prediction_percent(row):
+        predicted = set(row['indices'])
+        actual = set(row['label'])
+        return (len(predicted & actual) / len(predicted)) * 100
+
+    df['indices'] = df['indices'].apply(lambda x: eval(x) if isinstance(x, str) else x)
+    df['label'] = df['label'].apply(lambda x: eval(x) if isinstance(x, str) else x)
+
+    df['model_prediction_percent'] = df.apply(calculate_model_prediction_percent, axis=1)
 
     models = df['el_model'].unique()
+    predictions = df['prediction_instance'].unique()
 
+    bar_width = 0.2
     plt.figure(figsize=(12, 8))
 
-    for model in models:
+    for i, model in enumerate(models):
         model_df = df[df['el_model'] == model]
-        plt.plot(model_df.index, model_df['model_prediction_percent'], marker='o', label=model)
+        indices = model_df['prediction_instance'] + i * bar_width
+        plt.bar(indices, model_df['model_prediction_percent'], width=bar_width, label=model)
 
     plt.xlabel('Prediction Instance')
     plt.ylabel('Model Prediction %')
@@ -170,12 +181,12 @@ def plot_model_prediction_percent(df):
     plt.legend(title='Model')
     plt.grid(True)
     plt.tight_layout()
+    plt.xticks(ticks=predictions, labels=predictions)
 
     plt.savefig('reports/model_prediction_percent.png')
     plt.show()
 
-
-# df has the necessary columns: 'el_model', 'indices', 'label'
+# Generate the plots
 model_stats_df = count_predictions_and_matches(combined_df)
 model_performance_df = calculate_statistics(model_stats_df)
 plot_performance(model_performance_df)
