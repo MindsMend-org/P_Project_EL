@@ -1,4 +1,13 @@
 # P_Project_EL (WIP/TBC)
+## Binary Representation:
+![BINREP](x_demo_results/binrep.gif)
+
+## K-cluster:
+![K-](x_demo_results/k-cluster.png)
+
+## Interpreter [NotRF]:
+![NRF](x_demo_results/interpreter.png)
+
 
 ## Overview
 **Simple Innovative Technology Device & AI To Predict The Future.**
