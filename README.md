@@ -26,6 +26,7 @@ This part of the project attempts to predict future UK lotteries using data gene
 It is time to seek attention to this project to potentially verify this is a real effect/phenomenon.
 
 - **Live Demonstration**: This project was demonstrated live on X.com (previously Twitter) from November to December 2023. @M0000000000004
+- Follow me on X [https://www.x.com/@M0000000000004]
 - **Published Predictions**: Predictions were published between 24 hours to 1 week prior to the lottery draw.
 - **Data Storage**: Data is stored in the target date directory with the generation time as the timestamp.
 - **UK Lottery Results**: All UK Lottery results take place after 19:30 (H:M) on SAT/WED.
