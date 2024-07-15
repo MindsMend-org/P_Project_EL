@@ -4,13 +4,29 @@ The Chance of getting ALL7 (6 numbers + 1 bonus ball) is: **1 in 2,658,391,066**
 
 ## Training The Model
 
+```python
+def train_model(model, epochs=10, batch_size=32, graph=False):
+    x_train, x_ro_train, y_train = load_data_and_labels()
+
+    # Train the model
+    hist = model.fit([x_train, x_ro_train],
+                     y_train,
+                     epochs,
+                     batch_size,
+                     validation_split=0.08,
+                     callbacks=[checkpoint, callback, cooldown]
+                     )
+```
+
 The incredible size of all the combinations and the computational power required is beyond my current capabilities. While I can develop the software, I lack the necessary hardware. I am working with an i7 laptop and 42 GB of RAM, but to train this model on every possible combination would take an unimaginable amount of time, far beyond a human lifetime. This project has great potential, and with proper funding, it could achieve extraordinary results.
 
 These models can improve significantly, and my goal is to reach absolute accuracy, 100%. However, to achieve this, I need support. This is one reason I am sharing this project — to demonstrate its potential and appeal for investment.
 
 ### Provided Resources
 
-Here, you will find a synthetic dataset that was used to train the model. This dataset is provided to help others understand the methodology and potential of the project.
+Here, you will find a synthetic dataset (Superset) that was used to train the model. This dataset is provided to help others understand the methodology and potential of the project.
+
+The Supersets are the key to the effect.
 
 ---
 
