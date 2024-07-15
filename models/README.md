@@ -71,7 +71,7 @@ The model is compiled with the custom loss, and metrics for accuracy, precision,
 ### Current and Future Value
 ## NOW:
 
-Current Value: The model demonstrates significant potential with its dual input processing capability.
+Current Value: The model demonstrates significant potential and capability.
 
 ## Future:
 
