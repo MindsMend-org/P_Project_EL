@@ -1,4 +1,5 @@
-# 2023 Dual Input Model Design   2023-STUAX-Model[https://drive.google.com/file/d/1z2QobGFmejh8aftgSOK3opS68mwZGAny/view?usp=sharing]
+# 2023 Dual Input Model Design   
+## 2023-STUAX-Model[https://drive.google.com/file/d/1z2QobGFmejh8aftgSOK3opS68mwZGAny/view?usp=sharing]
 
 This repository contains the implementation of a dual input convolutional neural network (CNN) designed in 2023. The model is structured to handle two separate inputs and merge their information for the final prediction. Below, you will find the details of the model architecture and instructions on how to use it.
 
