@@ -102,6 +102,9 @@ The great thing about this project is it is real and you can run it on your syst
 ![Model Performance](reports/model_performance.png)
 ![Full Lottery Percent](reports/full_lottery_percent.png)
 
+## Getting up and running
+### 2023-STUAX Duel Input Model download link in Models/Readme.md
+
 ## License
 This project is licensed under the MIT License for personal, educational, and non-commercial use. For commercial use, please contact Mince at mince@foldingcircles.co.uk to obtain a commercial license.
 
