@@ -10,7 +10,7 @@
 
 
 ## Overview
-**Simple Innovative Technology Device & AI To Predict The Future.**
+**Simple / Innovative Technology / AI / To Predict The Future.**
 
 What this project opens up as a possibility, is truly staggering. Imagine being able to make accurate predictions of any future event at any temporal distance. The project explores the possibility of making predictions across various domains, including financial markets, lotteries, and real-time events like roulette spins. (WIP/TBC)
 
