@@ -19,10 +19,41 @@ The motivation behind this project is to challenge the conventional understandin
 
 Impossible it would seem, but what if the real truth is everything is written? Could this be a possibility? Akashic Records, Remote Viewing, NDEs all show a glimmer. The glimmer leads to attention, and attention is ALL.
 
+### The Dataset Challenge [Time & xPU-Power] 
+These models have only seen 150,000 datasets from the min tot of 2,658,391,066 
+
+a minimum of 2,658,391,066 datasets needed that is just 1 dataset per possibility! 
+
+each dataset is 2 similar images one for input1 and one for input2
+
+2 images size 13.2 KB = 13,532 bytes
+```python
+# Given data
+num_combinations = 2_658_391_066
+storage_per_combination_bytes = 13_532
+
+# Calculate total storage in bytes
+total_storage_bytes = num_combinations * storage_per_combination_bytes
+
+# Convert bytes to gigabytes
+total_storage_gb = total_storage_bytes / (1024 * 1024 * 1024)
+total_storage_gb
+```
+Result
+33502.79098852724
+approximately 33,502.79 GB
+
+1 TB = 1,024 GB
+approximately 32.72 TB
+
+
+
 ## Description
 This part of the project attempts to predict future UK lotteries using data generated before the event. The data will be added days before the event. (WIP/TBC)
 
 ## Current Progress
+Predicting 5 numbers and getting 2/3 correct repeatedly shows a level of consistency that is remarkable, even with these under-trained models.
+
 It is time to seek attention to this project to potentially verify this is a real effect/phenomenon.
 
 - **Live Demonstration**: This project was demonstrated live on X.com (previously Twitter) from November to December 2023. @M0000000000004
