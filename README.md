@@ -1,4 +1,6 @@
 # P_Project_EL (WIP/TBC)
+run nda.py set to predict 2 numbers, the signal is so diluted with only a fraction of training. [I Truly Hope One Day] I will see this project to ABSOLUTE level.
+
 ## Binary Representation:
 ![BINREP](x_demo_results/binrep.gif)
 
