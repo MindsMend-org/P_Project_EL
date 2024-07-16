@@ -1,1 +1,3 @@
+copy all images in the NDA_parties/images to here 
+remove all info.txt
 
