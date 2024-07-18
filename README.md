@@ -5,8 +5,9 @@ https://colab.research.google.com/drive/1e9XPbAb0wBpAaOTWUsEdDjl1kN48mzOQ?usp=sh
 ## P_Project_EL (WIP/TBC)  
 run nda.py set to predict 2 numbers, the signal is so diluted with only a fraction of training. [I Truly Hope One Day] I will see this project to ABSOLUTE level.
 
-## Binary Representation:
-![BINREP](x_demo_results/binrep.gif)
+## [HBR] Binary Representation:
+![BINREP](![9 Sat-30-09-2023AT1to7](https://github.com/user-attachments/assets/fca745b1-da35-4880-a457-141a26f6306b)
+)
 
 ## K-cluster:
 ![K-](x_demo_results/k-cluster.png)
