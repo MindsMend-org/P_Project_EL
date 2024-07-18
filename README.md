@@ -51,7 +51,17 @@ Result
 approximately 33,502.79 GB
 
 1 TB = 1,024 GB
+
 approximately 32.72 TB
+
+So ideally we would want 500k x 2,658,391,066 datasets impossible on my old pre RTX I7 Laptop.
+at 1 dataset per second it would take 84.24 years.
+it actually takes days just to do 50k datasets, it is not as straight forward as a normal train they all must be aligned, then there is the building of the dataset its self.
+
+This STUAX Model has seen between 50k and 150k datasets only and the result is clear indication this madness in design is effective.
+
+## [Secrets]
+ - Many secrets in this system, the numbers 4 and 7 play a role, [sequencial vs pattern] and synthetic data also play key roles.
 
 
 
