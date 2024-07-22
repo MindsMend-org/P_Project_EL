@@ -26,7 +26,7 @@ The motivation behind this project is to challenge the conventional understandin
 
 Impossible it would seem, but what if the real truth is everything is written? Could this be a possibility? Akashic Records, Remote Viewing, NDEs all show a glimmer. The glimmer leads to attention, and attention is ALL.
 
-## Unique Combinations (without repetition): 32,468,436
+## Unique Combinations (without repetition): 
 ## All Possible Combinations (with repetition): 2,658,391,066 
 
 ### The Dataset Challenge [Time & xPU-Power] 
