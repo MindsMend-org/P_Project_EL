@@ -58,3 +58,32 @@ The combination generator accepts the following command-line arguments:
 ```sh
 g++ -o combination_generator combination_generator.cpp -std=c++11
 ./combination_generator 1 1925643484 1 59 7 1000000 50000 1 1
+```
+# Min Superset [current] on a single I7 with Nvdia GTX this takes days, and runs boiling
+## Superset Min Specifications
+- Mem:48gb
+- HD:20gb
+- CPU:
+- GPU:
+
+- 
+## Recomended System
+- Mem: 64gb
+- HD:  20gb
+- CPU:
+- GPU:
+
+- 
+# Full Superset [funds needed] on a single I7 with Nvdia GTX this would take many lifetimes
+
+## Superset Min Specifications
+- Mem:64gb
+- HD:40tb
+- CPU:
+- GPU:
+- 
+## Recomended System
+- Mem: 32tb
+- HD: SSD 40tb
+- CPU:
+- GPU:
