@@ -1,5 +1,22 @@
-# No Coding Demo Runtime/Run all
+# Demo STUAX Model [2023]
+-Project EL STUAX Accuracy Predicting UK Lottery 
+
+Match 1 or More correct out of 7 numbers  
+
+% 62.10526315789473
+
+- Match [0]   %36.84210526315789  
+- Match [1]   %37.89473684210527  
+- Match [2]   %21.052631578947366  
+- Match [3]   %3.1578947368421053  
+
+[2023 STUAX Model bm set to false]
+## No Coding Skill Needed [runs in browser] 
 https://colab.research.google.com/drive/1e9XPbAb0wBpAaOTWUsEdDjl1kN48mzOQ?usp=sharing
+- Click Link
+- Click Runtime
+- Click Run all
+
 
 
 ## P_Project_EL (WIP/TBC)  
